@@ -1,0 +1,757 @@
+body { /* Reglas para todo el cuerpo de la página */
+    font-family: Arial, Helvetica, sans-serif; /* Tipo de letra; si no hay Arial usa Helvetica, y si no, cualquier letra sin serif */
+    font-size: 18px; /* Tamaño base de la letra: más grande que el estándar de 16 px, para que se lea cómodo en el celular */
+    line-height: 1.5; /* Espacio entre renglones: 1,5 veces el tamaño de la letra */
+    background-color: #f4f6fa; /* Color de fondo: gris azulado muy claro */
+    color: #2b2b2b; /* Color del texto: gris casi negro */
+    max-width: 480px; /* Ancho máximo del contenido */
+    margin: 40px auto; /* 40 px arriba y abajo; auto a los lados centra el contenido */
+    padding: 0 20px; /* Espacio interno: 0 arriba y abajo, 20 px a los lados */
+} /* Fin de body */
+
+h1 { /* Reglas para los títulos principales */
+    color: #3f6499; /* Azul: el mismo de los diagramas del TFG */
+    font-size: 1.6em; /* Tamaño del título, 1,6 veces el texto normal */
+} /* Fin de h1 */
+
+form { /* Reglas para los formularios */
+    background: white; /* Fondo blanco, para que se destaque del fondo gris */
+    padding: 20px; /* Espacio interno de 20 px */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1); /* Sombra suave: sin desplazamiento horizontal, 1 px abajo, 4 px de difuminado, negro al 10 por ciento */
+} /* Fin de form */
+
+label { /* Reglas para las etiquetas de los campos */
+    font-weight: bold; /* Letra en negrita */
+    display: block; /* Cada etiqueta ocupa su propia línea */
+    margin-top: 12px; /* Espacio de 12 px arriba */
+} /* Fin de label */
+
+input[type="text"], /* Campos de texto... */
+input[type="email"], /* ...de email... */
+input[type="password"], /* ...de contraseña... */
+input[type="date"], /* ...de fecha... */
+input[type="number"], /* ...numéricos... */
+select { /* ...y listas desplegables: todos comparten estas reglas */
+    width: 100%; /* Ocupan todo el ancho disponible */
+    padding: 12px; /* Espacio interno de 12 px: campos más cómodos de tocar */
+    min-height: 48px; /* Alto mínimo cómodo */
+    font-size: 1em; /* Letra del tamaño del texto normal */
+    margin-top: 4px; /* 4 px de separación con su etiqueta */
+    border: 1px solid #ccc; /* Borde fino gris claro */
+    border-radius: 4px; /* Esquinas apenas redondeadas */
+    box-sizing: border-box; /* El ancho incluye el relleno y el borde, así 100% no se sale del formulario */
+} /* Fin de los campos */
+
+button { /* Reglas para los botones */
+    background-color: #3f6499; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 14px 26px; /* Espacio interno generoso, para tocar con el dedo */
+    min-height: 52px; /* Alto mínimo cómodo */
+    border-radius: 10px; /* Esquinas redondeadas */
+    margin-top: 16px; /* 16 px de separación con lo de arriba */
+    cursor: pointer; /* El cursor se vuelve una manito al pasar encima */
+    font-size: 1.1em; /* Letra un poco más grande que el texto normal */
+} /* Fin de button */
+
+button:hover { /* Reglas para el botón cuando el mouse está encima */
+    background-color: #345380; /* Azul un poco más oscuro */
+} /* Fin de button:hover */
+
+.error { /* Reglas para todo elemento con class="error" (el punto indica una clase) */
+    color: #b33; /* Texto rojo */
+    font-weight: bold; /* Negrita */
+} /* Fin de .error */
+
+.success { /* Reglas para todo elemento con class="success" */
+    color: #2b7a3f; /* Texto verde */
+    font-weight: bold; /* Negrita */
+} /* Fin de .success */
+
+a { /* Reglas para todos los links */
+    display: inline-block; /* Les da alto propio, para que sean más fáciles de tocar con el dedo */
+    padding: 4px 0; /* Un poco de aire arriba y abajo de cada link */
+} /* Fin de a */
+
+/* =====================================================================
+   BOTONES GRANDES: pensados para tocar con el dedo en tablets y celulares
+   ===================================================================== */
+
+p > a:only-child, li > a:only-child { /* Todo link que está solo en su párrafo o en su ítem (los links de "Volver", "Salir", el menú...) se muestra como botón */
+    display: block; /* Ocupa todo el ancho: más fácil de tocar */
+    box-sizing: border-box; /* El ancho incluye el relleno */
+    min-height: 52px; /* Alto mínimo cómodo para un dedo, incluso el de un niño */
+    padding: 14px 18px; /* Espacio interno generoso */
+    margin: 8px 0; /* Separación con lo de arriba y lo de abajo, para no tocar uno por otro */
+    text-align: center; /* Texto centrado */
+    background: #e8eef8; /* Azul muy claro */
+    color: #3f6499; /* Texto azul, el mismo de los títulos */
+    border-radius: 10px; /* Esquinas redondeadas */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+} /* Fin de los links-botón */
+
+.boton, .boton-sec { /* Botones grandes para usar con class="boton" (principal) o class="boton-sec" (secundario) */
+    display: block; /* Ocupa todo el ancho */
+    box-sizing: border-box; /* El ancho incluye el relleno y el borde */
+    min-height: 60px; /* Alto mínimo grande */
+    padding: 16px 20px; /* Espacio interno */
+    margin: 12px 0; /* Separación entre botones */
+    text-align: center; /* Texto centrado */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+    font-size: 1.1em; /* Letra un poco más grande */
+    border-radius: 14px; /* Esquinas redondeadas */
+} /* Fin de .boton y .boton-sec */
+
+.boton { /* Botón principal */
+    background: #3f6499; /* Fondo azul */
+    color: white; /* Texto blanco */
+} /* Fin de .boton */
+
+.boton-sec { /* Botón secundario */
+    background: white; /* Fondo blanco */
+    color: #3f6499; /* Texto azul */
+    border: 2px solid #3f6499; /* Borde azul */
+} /* Fin de .boton-sec */
+
+.boton-sec.activo { /* Botón secundario que está encendido (por ejemplo, Subtítulos: sí) */
+    background: #dbe7f7; /* Azul claro: se nota que está activado */
+} /* Fin de .boton-sec.activo */
+
+.tarjeta { /* Tarjeta blanca que agrupa los botones de una historia */
+    background: white; /* Fondo blanco */
+    border-radius: 12px; /* Esquinas redondeadas */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1); /* Sombra suave */
+    padding: 6px 16px; /* Espacio interno */
+    margin: 14px 0; /* Separación entre tarjetas */
+} /* Fin de .tarjeta */
+
+/* =====================================================================
+   PANTALLA DE UN PASO DE LA HISTORIA: imagen grande, flechas a los lados
+   ===================================================================== */
+
+body.ancha { /* En la pantalla de un paso, la página usa todo el ancho disponible */
+    max-width: 1100px; /* Tope para pantallas muy grandes */
+    margin: 10px auto; /* Menos margen arriba y abajo */
+    padding: 0 10px; /* Poco espacio a los lados: la imagen aprovecha el ancho */
+} /* Fin de body.ancha */
+
+.marco { /* Marco que contiene la imagen y las flechas */
+    position: relative; /* Las flechas se ubican respecto de este marco */
+    display: flex; /* Pone la imagen en el centro */
+    justify-content: center; /* Centra lo que hay adentro */
+    align-items: center; /* Centra verticalmente */
+} /* Fin de .marco */
+
+.paso-img { /* Imagen de un paso */
+    display: block; /* Bloque propio */
+    max-width: 100%; /* Nunca más ancha que la pantalla */
+    max-height: calc(100vh - 200px); /* Alto máximo: toda la pantalla menos el espacio de los botones (respaldo para navegadores viejos) */
+    max-height: calc(100dvh - 200px); /* Lo mismo, descontando la barra del navegador en celulares y tablets */
+    width: auto; /* Ancho según la proporción de la imagen */
+    height: auto; /* Alto según la proporción de la imagen */
+    border-radius: 12px; /* Esquinas redondeadas */
+} /* Fin de .paso-img */
+
+.flecha { /* Flechas grandes para ir al paso anterior o al siguiente */
+    position: absolute; /* En pantallas angostas se montan sobre los bordes de la imagen */
+    top: 50%; /* A mitad de la altura de la imagen */
+    transform: translateY(-50%); /* Las centra verticalmente sobre esa línea */
+    z-index: 2; /* Por encima de la imagen */
+    width: 68px; /* Diámetro grande: se toca con comodidad */
+    height: 68px; /* Igual que el ancho: círculo */
+    border-radius: 50%; /* Forma de círculo */
+    background: rgba(255, 255, 255, 0.88); /* Blanco casi opaco, para que se vea sobre cualquier imagen */
+    color: #3f6499; /* Flecha azul */
+    font-size: 34px; /* Tamaño de la flecha */
+    line-height: 68px; /* Centra la flecha dentro del círculo */
+    text-align: center; /* Centrada */
+    text-decoration: none; /* Sin subrayado */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35); /* Sombra: se despega de la imagen */
+    padding: 0; /* Sin relleno extra */
+} /* Fin de .flecha */
+
+.flecha.izq { left: 8px; } /* Flecha izquierda: pegada al borde izquierdo */
+.flecha.der { right: 8px; } /* Flecha derecha: pegada al borde derecho */
+.flecha.oculta { visibility: hidden; } /* Lugar vacío: ocupa su espacio pero no se ve */
+
+@media (max-width: 899px) { /* Pantallas angostas: las flechas se montan sobre el contenido */
+    .marco-actividad .flecha { top: 36px; transform: none; } /* En la actividad de ordenar suben a la fila del mapa modelo, que es angosto y deja libres los costados: así nunca tapan las gemas, los orificios ni la cerradura */
+} /* Fin de la regla para pantallas angostas */
+
+@media (min-width: 900px) { /* En pantallas anchas (tablet acostada, compu) las flechas van afuera de la imagen */
+    .marco { gap: 18px; } /* Separación entre la imagen y las flechas */
+    .flecha { position: static; transform: none; flex: none; } /* Pasan a ser parte de la fila, a los costados */
+} /* Fin de la regla para pantallas anchas */
+
+.opciones { /* Las dos opciones de una decisión, una al lado de la otra */
+    display: flex; /* En fila */
+    gap: 12px; /* Separación entre las dos */
+    width: 100%; /* Todo el ancho del marco */
+    justify-content: center; /* Centradas */
+} /* Fin de .opciones */
+
+.opcion { /* Cada opción, que es un link con una imagen */
+    flex: 1; /* Reparten el ancho en partes iguales */
+    display: block; /* Bloque propio */
+    padding: 6px; /* Espacio alrededor de la imagen */
+    background: white; /* Fondo blanco */
+    border: 4px solid #c9d6ea; /* Borde azul claro: se nota que se puede tocar */
+    border-radius: 14px; /* Esquinas redondeadas */
+} /* Fin de .opcion */
+
+.opcion img { /* Imagen de una opción */
+    display: block; /* Bloque propio */
+    width: 100%; /* Todo el ancho de su opción */
+    max-height: calc(100vh - 300px); /* Alto máximo (respaldo para navegadores viejos) */
+    max-height: calc(100dvh - 300px); /* Alto máximo descontando la barra del navegador */
+    object-fit: contain; /* Se ve entera, sin recortarse */
+} /* Fin de .opcion img */
+
+.mensaje { /* Mensajes de una decisión: ¡Muy bien!, Probemos de nuevo */
+    text-align: center; /* Centrado */
+    font-size: 1.5em; /* Grande */
+    font-weight: bold; /* Negrita */
+    margin: 12px 0; /* Separación */
+} /* Fin de .mensaje */
+
+.mensaje.bien { color: #2b7a3f; } /* Mensaje positivo en verde */
+
+.subtitulo { /* Texto del paso (subtítulo) */
+    text-align: center; /* Centrado */
+    font-size: 1.5em; /* Grande: lo lee un adulto o un niño que ya lee */
+    font-weight: bold; /* Negrita */
+    margin: 14px 0 4px; /* Separación */
+} /* Fin de .subtitulo */
+
+.avance { /* Número de paso */
+    text-align: center; /* Centrado */
+    color: #777; /* Gris */
+    font-size: 0.9em; /* Letra más chica */
+    margin: 0 0 8px; /* Separación */
+} /* Fin de .avance */
+
+.controles { /* Fila de botones de subtítulo, audio y salida */
+    display: flex; /* En fila */
+    flex-wrap: wrap; /* Si no entran, pasan al renglón de abajo */
+    gap: 10px; /* Separación entre botones */
+    justify-content: center; /* Centrados */
+    margin-top: 10px; /* Separación con lo de arriba */
+} /* Fin de .controles */
+
+.controles .boton-sec { /* Botones de la fila de controles */
+    flex: 1 1 180px; /* Crecen para repartirse el ancho; mínimo 180 px antes de pasar al renglón de abajo */
+    margin: 0; /* Sin margen propio: la separación la da el gap */
+} /* Fin de .controles .boton-sec */
+
+ul { /* Las listas (el menú) no llevan viñetas: cada ítem es un botón */
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin sangría */
+    margin: 0; /* Sin margen propio */
+} /* Fin de ul */
+
+li { /* Cada ítem de una lista */
+    margin: 0; /* Sin margen propio: la separación la da el botón */
+} /* Fin de li */
+
+.lateral { /* Panel con los mensajes, el subtítulo y los botones de un paso */
+    width: 100%; /* En pantallas angostas ocupa todo el ancho, debajo de la imagen */
+} /* Fin de .lateral */
+
+/* =====================================================================
+   ICONOS DE SUBTÍTULO, AUDIO Y SALIDA, Y ALTURA DE LA IMAGEN
+   ===================================================================== */
+
+body.ancha { /* Pantalla de un paso: la página usa casi todo el ancho, con un tope para pantallas muy grandes */
+    max-width: 1100px; /* Tope de ancho: el conjunto queda centrado */
+    margin: 8px auto; /* Poco margen arriba y abajo */
+    padding: 0 12px; /* Poco espacio a los lados */
+    --reserva: 100px; /* Alto que se le reserva a la fila de iconos debajo de la imagen; la imagen ocupa el resto de la pantalla */
+} /* Fin de body.ancha */
+
+body.ancha.con-sub { --reserva: 190px; } /* Con subtítulo, la fila de abajo es más alta (hasta tres renglones de texto): la imagen cede un poco */
+body.ancha.decision { --reserva: 190px; } /* En una decisión con selección, abajo van los mensajes y el botón Seguir */
+body.ancha.decision.con-sub { --reserva: 280px; } /* Decisión con subtítulo: más reserva todavía */
+
+.paso-img { /* Imagen de un paso: lo más grande que entre sin que haya que bajar con el scroll */
+    max-height: calc(100vh - var(--reserva)); /* Alto máximo (respaldo para navegadores viejos) */
+    max-height: calc(100dvh - var(--reserva)); /* Alto máximo descontando la barra del navegador y la fila de abajo */
+} /* Fin de .paso-img */
+
+.opcion img { /* Imágenes de las opciones de una decisión */
+    max-height: calc(100vh - var(--reserva) - 20px); /* Alto máximo (respaldo para navegadores viejos) */
+    max-height: calc(100dvh - var(--reserva) - 20px); /* Alto máximo descontando la barra del navegador y la fila de abajo */
+} /* Fin de .opcion img */
+
+.icono { /* Botón redondo con un dibujo: blanco, con borde negro */
+    display: flex; /* Centra el dibujo adentro */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    box-sizing: border-box; /* El tamaño incluye el borde */
+    width: 60px; /* Diámetro: cómodo de tocar con el dedo */
+    height: 60px; /* Igual que el ancho: círculo */
+    flex: none; /* No se achica */
+    padding: 0; /* Sin relleno extra */
+    border-radius: 50%; /* Forma de círculo */
+    background: white; /* Fondo blanco */
+    border: 3px solid #000; /* Borde negro */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25); /* Sombra suave */
+    text-decoration: none; /* Sin subrayado */
+} /* Fin de .icono */
+
+.icono.salir { /* Botón de salir: fijo arriba a la derecha de la pantalla */
+    position: fixed; /* Queda en su lugar aunque se mueva la página */
+    top: 10px; /* Separación del borde de arriba */
+    right: 10px; /* Separación del borde derecho */
+    z-index: 5; /* Por encima de lo demás */
+    width: 52px; /* Un poco más chico que los otros */
+    height: 52px; /* Igual que el ancho */
+} /* Fin de .icono.salir */
+
+.barra { /* Fila debajo de la imagen: iconos a la izquierda y texto a su derecha */
+    display: flex; /* En fila */
+    align-items: flex-start; /* Iconos y texto arriba */
+    gap: 14px; /* Separación entre iconos y texto */
+    width: 100%; /* Todo el ancho disponible */
+    max-width: 780px; /* Sin estirarse de más en pantallas grandes */
+    margin: 12px auto 0; /* Centrada, con separación de la imagen */
+} /* Fin de .barra */
+
+.iconos { /* Grupo de iconos */
+    display: flex; /* En fila */
+    gap: 10px; /* Separación entre iconos */
+    flex: none; /* No se achica */
+} /* Fin de .iconos */
+
+.texto { /* Contenedor del texto del paso */
+    flex: 1; /* Ocupa el resto de la fila */
+    min-width: 0; /* Permite que el texto se parta en renglones */
+} /* Fin de .texto */
+
+.texto .subtitulo, .texto .avance { /* Subtítulo y número de paso, alineados a la izquierda junto a los iconos */
+    max-width: none; /* Sin tope propio: usa el ancho de la columna */
+    margin-left: 0; /* Pegados a los iconos */
+    margin-right: 0; /* Sin margen */
+    text-align: left; /* Alineado a la izquierda */
+} /* Fin de .texto .subtitulo y .avance */
+
+.texto .subtitulo { margin-top: 2px; margin-bottom: 2px; } /* Poco aire arriba y abajo, para alinear con los iconos */
+
+/* =====================================================================
+   ACTIVIDAD DE ORDENAR GEMAS (historia de Panbu): mapa con gemas,
+   cerradura del cofre y bandeja con las gemas
+   ===================================================================== */
+
+[hidden] { display: none !important; } /* Lo que tiene el atributo hidden no se ve, aunque su clase le dé otro display (por ejemplo .boton) */
+
+/* ---- Mapa entero con las tres gemas dibujadas encima (paso "mapa") ---- */
+
+.mapa-cont { /* Contenedor del mapa: mide lo mismo que la imagen, así las gemas se ubican con porcentajes */
+    position: relative; /* Las gemas se ubican respecto de este contenedor */
+    flex: 0 1 auto; /* Dentro del marco puede achicarse, pero no estirarse */
+    width: min(100%, calc((100vh - var(--reserva, 100px)) * 1.5)); /* Ancho: el de la pantalla, o el que haga entrar la imagen en alto (el mapa es 3:2) (respaldo para navegadores viejos) */
+    width: min(100%, calc((100dvh - var(--reserva, 100px)) * 1.5)); /* Lo mismo, descontando la barra del navegador */
+    line-height: 0; /* Sin espacio extra debajo de la imagen */
+} /* Fin de .mapa-cont */
+
+.mapa-cont .paso-img { /* La imagen del mapa dentro de su contenedor */
+    width: 100%; /* Ocupa todo el contenedor */
+    max-height: none; /* El alto ya lo limita el ancho del contenedor */
+    height: auto; /* El alto sale de la proporción de la imagen */
+} /* Fin de .mapa-cont .paso-img */
+
+.gema-sobre { /* Gema dibujada encima de un círculo del mapa (el ancho y la posición se ponen en el HTML, en %) */
+    position: absolute; /* Se ubica respecto de la imagen */
+    transform: translate(-50%, -50%); /* La posición indicada es el centro de la gema, no su esquina */
+    height: auto; /* El alto sale del ancho: la gema es cuadrada */
+    pointer-events: none; /* No intercepta toques */
+    -webkit-user-select: none; /* No se puede seleccionar (Safari) */
+    user-select: none; /* No se puede seleccionar */
+} /* Fin de .gema-sobre */
+
+/* ---- Actividad de ordenar: de arriba hacia abajo, el modelo, las gemas y la cerradura ---- */
+
+.ordenar { /* Toda la actividad: una columna centrada con título, mapa modelo (chico), gemas (grandes), cerradura (ancha) y mensaje. Todo se calcula a partir de un solo ancho, el más grande que entre en la pantalla */
+    --vh: 1vh; /* Unidad de alto de pantalla (respaldo para navegadores viejos) */
+    --alto: calc(100 * var(--vh) - var(--reserva, 100px)); /* Alto disponible: la pantalla menos la fila de iconos de abajo */
+    --util: calc(var(--alto) - 100px); /* Alto para los tres elementos: se descuentan el título, el mensaje y las separaciones (unos 100 px) */
+    --ratio-cerr: 0.8235; /* Proporción ancho/alto de la imagen de la cerradura; el PHP pone la real (la franja nueva es 2,62; la imagen vieja, 0,82) */
+    --ancho-max: min(94vw, 880px); /* El ancho más grande que permite la pantalla */
+    --ancho-alto: calc((var(--util) - 15px) / (0.1589 + 0.2778 + 1 / var(--ratio-cerr))); /* El ancho con el que todo entra en el alto: mapa (16 % del ancho) + gemas (28 %) + cerradura (1 / proporción) */
+    --ancho: max(220px, min(var(--ancho-max), var(--ancho-alto))); /* Ancho de la actividad: el mayor posible, ni más ni menos de lo que entra */
+    --ancho-tira: calc(var(--ancho) * 0.55); /* El mapa modelo ocupa poco: es solo una referencia y deja el lugar a lo importante */
+    --gema: max(56px, calc((var(--ancho) - 32px) / 3.6)); /* Cada gema: lo más grande que entre en el ancho, con las tres juntas */
+    --alto-bandeja: calc(var(--gema) + 24px); /* Alto de la bandeja: la gema más su borde y su relleno */
+    --ancho-cerradura: var(--ancho); /* La cerradura ocupa todo el ancho de la actividad */
+    touch-action: none; /* En pantalla táctil, nada de lo que se toque o arrastre acá desplaza o agranda la página: así el sistema no corta el arrastre de una gema (por ejemplo, al apoyar otro dedo o la palma) */
+    display: flex; /* Elementos en columna */
+    flex-direction: column; /* De arriba hacia abajo */
+    align-items: center; /* Centrados */
+    gap: 8px; /* Separación entre elementos */
+    flex: 0 1 auto; /* Dentro del marco puede achicarse, pero no estirarse */
+    min-width: 0; /* Permite achicarse */
+    max-width: 100%; /* Nunca más ancha que el marco */
+    -webkit-user-select: none; /* Nada se selecciona al tocar y arrastrar (Safari) */
+    user-select: none; /* Nada se selecciona al tocar y arrastrar */
+    -webkit-touch-callout: none; /* Sin el menú de iOS al dejar el dedo apoyado */
+    -webkit-tap-highlight-color: transparent; /* Sin el destello gris al tocar */
+} /* Fin de .ordenar */
+
+@supports (height: 100dvh) { /* Si el navegador conoce la unidad dvh (alto sin la barra del navegador) */
+    .ordenar { --vh: 1dvh; } /* La usa */
+} /* Fin de @supports */
+
+@media (min-width: 900px) { /* En pantallas anchas las flechas laterales ocupan lugar propio (unos 172 px) y el cuerpo deja 24 px de margen */
+    .ordenar { --ancho-max: min(calc(100vw - 196px), 880px); } /* El ancho máximo descuenta ese espacio: así la cerradura nunca pisa las flechas */
+} /* Fin de la regla para pantallas anchas */
+
+@media (min-width: 900px) and (min-aspect-ratio: 5/4) { /* Pantalla ancha y horizontal (tablet o PC): hay lugar a los costados, así que el mapa modelo va a la izquierda y las gemas y la cerradura ocupan todo el alto */
+    .ordenar { /* Toda la actividad, ahora en dos columnas */
+        --ancho-max: calc((min(100vw - 196px, 904px) - 24px) / 1.36); /* Ancho de la columna central: deja lugar a la columna del mapa (36 % de ese ancho) y a la separación */
+        --ancho-alto: calc((var(--util) - 15px) / (0.2778 + 1 / var(--ratio-cerr))); /* El mapa ya no está arriba: el alto lo ocupan solo las gemas y la cerradura */
+        --ancho-tira: calc(var(--ancho) * 0.36); /* Ancho del mapa modelo */
+        display: grid; /* Cuadrícula en vez de columna */
+        grid-template-columns: var(--ancho-tira) var(--ancho); /* Dos columnas: el mapa y el resto */
+        grid-template-areas: "titulo titulo" "tira bandeja" ". cerradura" ". ayuda"; /* El título arriba; el mapa al lado de las gemas; la cerradura y el mensaje debajo */
+        column-gap: 24px; /* Separación entre las dos columnas */
+        row-gap: 8px; /* Separación entre filas */
+        align-items: center; /* Centrados en vertical dentro de su fila */
+        justify-items: center; /* Centrados en horizontal dentro de su columna */
+    } /* Fin de .ordenar */
+
+    .ordenar-titulo { grid-area: titulo; } /* El título ocupa las dos columnas */
+    .tira { grid-area: tira; } /* El mapa modelo, a la izquierda, al lado de las gemas */
+    .zona-bandeja { grid-area: bandeja; } /* Las gemas, en la columna central */
+    .cerradura { grid-area: cerradura; } /* La cerradura, debajo de las gemas */
+    .ordenar-ayuda { grid-area: ayuda; } /* El mensaje, debajo de la cerradura */
+} /* Fin de la regla para pantalla ancha y horizontal */
+
+.ordenar-lado { display: contents; } /* Este contenedor no cuenta: sus elementos se acomodan junto a la cerradura según su "order" */
+
+.ordenar-titulo { /* Título de la actividad */
+    order: 1; /* Primero */
+    margin: 0; /* Sin margen propio: la separación la da el gap */
+    font-size: 1.15em; /* Un poco más grande que el texto común */
+    font-weight: bold; /* Negrita */
+    color: #3f6499; /* Azul, el mismo de los títulos */
+    text-align: center; /* Centrado */
+} /* Fin de .ordenar-titulo */
+
+.tira { /* Tira del mapa con las tres gemas que hay que copiar */
+    order: 2; /* Segunda */
+    position: relative; /* Las gemas se ubican respecto de la tira */
+    width: var(--ancho-tira); /* Ancho calculado arriba */
+} /* Fin de .tira */
+
+.tira-img { /* Imagen de la tira */
+    display: block; /* Bloque propio */
+    width: 100%; /* Todo el ancho de la tira */
+    height: auto; /* Alto según la proporción */
+    border-radius: 12px; /* Esquinas redondeadas */
+} /* Fin de .tira-img */
+
+.zona-bandeja { /* Lugar de las gemas: ahí mismo aparece el botón Seguir al resolver, así nada se corre de sitio */
+    order: 3; /* Tercera: entre el mapa modelo y la cerradura */
+    display: grid; /* Los hijos se apilan en la misma celda */
+    place-items: center; /* Centrados */
+} /* Fin de .zona-bandeja */
+
+.zona-bandeja > * { grid-area: 1 / 1; } /* La bandeja y el botón Seguir ocupan la misma celda */
+
+.bandeja { /* Bandeja con las tres gemas que se ofrecen */
+    display: flex; /* Las tres casillas en fila */
+    justify-content: center; /* Centradas */
+    gap: calc(var(--gema) * 0.3); /* Separación entre casillas, proporcional a la gema */
+    padding: 10px 14px; /* Espacio interno */
+    background: white; /* Fondo blanco */
+    border: 2px solid #c9d6ea; /* Borde azul claro */
+    border-radius: 18px; /* Esquinas redondeadas */
+} /* Fin de .bandeja */
+
+.ordenar.resuelta .bandeja { visibility: hidden; } /* Al resolver, la bandeja se oculta pero conserva su lugar: la cerradura no se mueve */
+
+.casilla { /* Lugar fijo de cada gema en la bandeja: queda un hueco gris cuando la gema está puesta en la cerradura */
+    flex: none; /* No se achica */
+    width: var(--gema); /* Ancho de la gema */
+    height: var(--gema); /* Alto de la gema */
+    border-radius: 50%; /* Círculo */
+    background: #e6ecf6; /* Gris azulado claro */
+} /* Fin de .casilla */
+
+.cerradura { /* Cerradura del cofre, con los tres orificios */
+    order: 4; /* Cuarta: debajo de las gemas, así el dedo recorre poco camino */
+    position: relative; /* Los orificios se ubican respecto de la cerradura */
+    width: var(--ancho-cerradura); /* Ancho calculado arriba */
+} /* Fin de .cerradura */
+
+.cerradura-img { /* Imagen de la cerradura */
+    display: block; /* Bloque propio */
+    width: 100%; /* Todo el ancho de la cerradura */
+    height: auto; /* Alto según la proporción */
+    border-radius: 12px; /* Esquinas redondeadas */
+} /* Fin de .cerradura-img */
+
+.agujero { /* Zona táctil de un orificio: más grande que el agujero dibujado, para que sea fácil de acertar */
+    position: absolute; /* Se ubica respecto de la cerradura (izquierda y arriba se ponen en el HTML, en %) */
+    width: var(--agujero, 24%); /* Ancho de la zona táctil, en % de la cerradura: lo pone el PHP según la imagen (27 % en la franja nueva; 24 % en la imagen vieja) */
+    aspect-ratio: 1; /* Cuadrada, para que con el borde redondeado sea un círculo */
+    transform: translate(-50%, -50%); /* La posición indicada es el centro, no la esquina */
+    display: flex; /* Centra la gema que se ponga adentro */
+    align-items: center; /* Centrada en vertical */
+    justify-content: center; /* Centrada en horizontal */
+    border-radius: 50%; /* Forma de círculo */
+    cursor: pointer; /* Manito al pasar el mouse */
+    outline: none; /* Sin el recuadro del navegador (el foco se marca más abajo) */
+} /* Fin de .agujero */
+
+.agujero:focus-visible { box-shadow: 0 0 0 4px #3f6499; } /* Con el teclado, el orificio enfocado se marca con un aro azul */
+
+.agujero.sobre { box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.95), 0 0 0 8px #3f6499; } /* Mientras se arrastra una gema, el orificio al que va a caer se marca con un aro */
+
+.ordenar.hay-elegida .agujero { box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.95), 0 0 0 6px #3f6499; } /* Con una gema elegida, los orificios se resaltan con un aro: muestran a dónde se puede poner */
+
+.gema { /* Una gema: se toca o se arrastra */
+    width: var(--gema); /* Tamaño en la bandeja */
+    height: var(--gema); /* Cuadrada */
+    border-radius: 50%; /* Para que el aro de foco sea redondo */
+    cursor: grab; /* Manito de agarrar al pasar el mouse */
+    touch-action: none; /* En pantalla táctil, arrastrar una gema no desplaza la página */
+    outline: none; /* Sin el recuadro del navegador (el foco se marca más abajo) */
+    transition: transform 0.12s; /* La gema elegida crece suavemente */
+} /* Fin de .gema */
+
+.gema img { /* Dibujo de la gema */
+    display: block; /* Bloque propio */
+    width: 100%; /* Todo el ancho de la gema */
+    height: 100%; /* Todo el alto de la gema */
+    pointer-events: none; /* Los toques los recibe la gema, no el dibujo */
+    -webkit-user-drag: none; /* No se arrastra como imagen suelta (Safari) */
+} /* Fin de .gema img */
+
+.agujero .gema { /* Gema ya puesta en un orificio */
+    width: var(--gema-puesta, 71.25%); /* Del tamaño del agujero dibujado dentro de la zona táctil: lo pone el PHP según la imagen (81 % en la franja nueva; 71,25 % en la imagen vieja) */
+    height: auto; /* Alto según el ancho */
+    aspect-ratio: 1; /* Cuadrada */
+} /* Fin de .agujero .gema */
+
+.gema:focus-visible { box-shadow: 0 0 0 4px #3f6499; } /* Con el teclado, la gema enfocada se marca con un aro azul */
+
+.gema.elegida { /* Gema elegida con un toque, esperando el orificio */
+    box-shadow: 0 0 0 5px #3f6499, 0 0 14px 6px rgba(63, 100, 153, 0.45); /* Aro azul con brillo */
+    transform: scale(1.07); /* Un poco más grande */
+} /* Fin de .gema.elegida */
+
+.gema.levantada { opacity: 0.3; } /* La gema que se está arrastrando se ve apagada en su lugar de origen */
+
+.gema-fantasma { /* Copia de la gema que sigue al dedo o al mouse durante el arrastre */
+    position: fixed; /* Se mueve libremente por la pantalla */
+    z-index: 50; /* Por encima de todo */
+    pointer-events: none; /* No intercepta toques */
+    touch-action: none; /* No desplaza la página */
+    transform: scale(1.12); /* Un poco más grande: se nota que está levantada */
+    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4)); /* Sombra: parece flotar */
+} /* Fin de .gema-fantasma */
+
+.gema-fantasma img { /* Dibujo de la copia */
+    display: block; /* Bloque propio */
+    width: 100%; /* Todo el ancho */
+    height: 100%; /* Todo el alto */
+} /* Fin de .gema-fantasma img */
+
+.ordenar.resuelta .gema { pointer-events: none; cursor: default; } /* Con la cerradura abierta, las gemas ya no se mueven */
+
+.ordenar-ayuda { /* Renglón de ayuda y de mensajes de la actividad */
+    order: 5; /* Último: debajo de la cerradura */
+    margin: 0; /* Sin margen propio */
+    height: 40px; /* Alto fijo (no mínimo): ni el mensaje grande de ¡Muy bien! lo agranda, así nada se corre de lugar al resolver */
+    display: flex; /* Centra el texto */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    text-align: center; /* Centrado */
+    line-height: 1.1; /* Renglones juntos: entran en el alto fijo */
+    font-size: 0.95em; /* Letra un poco más chica: es una ayuda */
+    color: #555; /* Gris oscuro */
+} /* Fin de .ordenar-ayuda */
+
+.ordenar-ayuda.mensaje { /* Cuando el renglón muestra un mensaje (Probemos de nuevo, ¡Muy bien!) */
+    margin: 0; /* Sin el margen de .mensaje */
+    font-size: 1.5em; /* Grande */
+    color: #2b2b2b; /* Texto oscuro */
+} /* Fin de .ordenar-ayuda.mensaje */
+
+.ordenar-ayuda.mensaje.bien { color: #2b7a3f; } /* Mensaje positivo en verde */
+
+.ordenar-seguir { /* Botón Seguir: aparece en el lugar de las gemas al resolver */
+    box-sizing: border-box; /* El ancho incluye el relleno */
+    width: min(320px, 100%); /* Hasta 320 px, sin pasarse de su lugar */
+    margin: 0; /* Sin margen propio */
+} /* Fin de .ordenar-seguir */
+
+/* =====================================================================
+   PANTALLA DE ACTIVIDADES CON CÍRCULOS (reservado para una versión futura con
+   burbujas y dibujos: hoy el menú usa los botones grandes de más abajo)
+   ===================================================================== */
+
+body.elegir { /* Pantalla donde se elige la actividad: contenido centrado y más ancho que las demás pantallas */
+    max-width: 720px; /* Alcanza para dos círculos grandes en una tablet */
+    text-align: center; /* Todo centrado */
+} /* Fin de body.elegir */
+
+.saludo { /* Pregunta de S.I.M.O.N. */
+    font-size: 1.3em; /* Más grande que el texto común */
+    margin: 4px 0 28px; /* Poco aire arriba y bastante antes de los círculos */
+} /* Fin de .saludo */
+
+.actividades { /* Los dos círculos, uno al lado del otro */
+    display: flex; /* En fila */
+    justify-content: center; /* Centrados */
+    align-items: flex-start; /* Alineados arriba aunque un nombre ocupe más renglones */
+    gap: 28px; /* Separación entre los dos */
+    margin-bottom: 20px; /* Aire antes del botón de volver */
+} /* Fin de .actividades */
+
+.actividad { /* Cada actividad: el círculo con su nombre debajo (es un link entero, se toca en cualquier parte) */
+    display: flex; /* Círculo y nombre en columna */
+    flex-direction: column; /* De arriba hacia abajo */
+    align-items: center; /* Centrados */
+    flex: 1 1 0; /* Reparten el ancho en partes iguales */
+    max-width: 300px; /* Sin pasarse de grandes en pantallas anchas */
+    padding: 0; /* Sin el relleno de los links comunes */
+    text-decoration: none; /* Sin subrayado */
+    color: #3f6499; /* Texto azul, el mismo de los títulos */
+    font-weight: bold; /* Negrita */
+    font-size: 1.2em; /* Letra grande, fácil de leer */
+    line-height: 1.25; /* Renglones juntos: son nombres cortos */
+    -webkit-tap-highlight-color: transparent; /* Sin el destello gris al tocar */
+} /* Fin de .actividad */
+
+.circulo { /* Círculo con la imagen de la actividad */
+    display: block; /* Bloque propio */
+    box-sizing: border-box; /* El tamaño incluye el borde */
+    width: 100%; /* Todo el ancho de su columna */
+    aspect-ratio: 1; /* Cuadrado, para que con el borde redondeado sea un círculo */
+    margin-bottom: 12px; /* Separación con el nombre */
+    overflow: hidden; /* La imagen se recorta con la forma del círculo */
+    border: 6px solid #c9d6ea; /* Borde azul claro: se nota que se puede tocar */
+    border-radius: 50%; /* Forma de círculo */
+    background: white; /* Fondo blanco detrás de la imagen */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18); /* Sombra suave */
+} /* Fin de .circulo */
+
+.circulo img { /* Imagen dentro del círculo */
+    display: block; /* Bloque propio */
+    width: 100%; /* Todo el ancho del círculo */
+    height: 100%; /* Todo el alto del círculo */
+    object-fit: cover; /* Llena el círculo sin deformarse */
+} /* Fin de .circulo img */
+
+.actividad:active .circulo, .actividad:focus-visible .circulo { border-color: #3f6499; } /* Al tocarlo o al enfocarlo con el teclado, el borde se pone azul oscuro */
+
+@media (hover: hover) { /* Solo con mouse */
+    .actividad:hover .circulo { border-color: #3f6499; } /* Al pasar el mouse, el borde se pone azul oscuro */
+} /* Fin de la regla para mouse */
+
+.grupo-titulo { /* Título de cada grupo de historias en "Asignar historia" (Historias de rutinas / Ordenar) */
+    margin: 18px 0 4px; /* Aire arriba para separar un grupo del anterior */
+    color: #3f6499; /* Azul, el mismo de los títulos */
+    font-size: 1.1em; /* Un poco más grande que el texto común */
+} /* Fin de .grupo-titulo */
+
+/* =====================================================================
+   BOTONES GRANDES DE LAS ACTIVIDADES (menú de la profesional)
+   ===================================================================== */
+
+.boton-grande { /* Se usa junto con class="boton": mismo estilo que los demás botones, pero más grande para que las actividades se distingan de las opciones de gestión */
+    min-height: 100px; /* Mucho más alto que un botón común (60 px) */
+    padding: 30px 20px; /* Espacio interno generoso: el texto queda en el centro */
+    font-size: 1.6em; /* Letra bastante más grande */
+    line-height: 1.2; /* Renglones juntos: son nombres cortos */
+    border-radius: 18px; /* Esquinas más redondeadas */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra suave: se ve que se puede tocar */
+} /* Fin de .boton-grande */
+
+/* =====================================================================
+   PASOS DE LA HISTORIA: imagen centrada en la pantalla y agrandada
+   ===================================================================== */
+
+body.ancha:not(.decision) { /* Pantalla de un paso, salvo las decisiones donde el niño toca una opción (ahí aparecen mensajes abajo y el contenido no debe correrse) */
+    min-height: calc(100vh - 16px); /* Alto de la pantalla menos los 16 px de margen de arriba y abajo (respaldo para navegadores viejos) */
+    min-height: calc(100dvh - 16px); /* Lo mismo, descontando la barra del navegador en celulares y tablets */
+    display: flex; /* Contenido en columna */
+    flex-direction: column; /* De arriba hacia abajo */
+    justify-content: center; /* Centrado en vertical: si la imagen es más baja que la pantalla, el espacio sobrante se reparte arriba y abajo */
+} /* Fin de body.ancha:not(.decision) */
+
+.paso-img { /* Imagen de un paso: las horizontales (como las de Panbu) se agrandan hasta el ancho disponible, sin pasarse del alto de la pantalla */
+    min-width: 0; /* Permite que la imagen se achique para dejar lugar a las flechas */
+    width: min(100%, calc((100vh - var(--reserva, 100px)) * var(--ratio, 1))); /* Ancho: el disponible, o el que haga entrar la imagen en alto (alto disponible por su proporción) (respaldo para navegadores viejos) */
+    width: min(100%, calc((100dvh - var(--reserva, 100px)) * var(--ratio, 1))); /* Lo mismo, descontando la barra del navegador */
+} /* Fin de .paso-img */
+
+/* =====================================================================
+   HOJA DE LA FICHA (ver_ficha.php): se ve como una hoja de ficha en papel
+   ===================================================================== */
+
+body.con-hoja { max-width: 760px; } /* Pantalla de la hoja: más ancha que las demás, como una hoja de papel */
+
+.par-botones { /* Dos botones uno al lado del otro (por ejemplo, Abrir ficha y Ver ficha en Perfiles) */
+    display: flex; /* En fila */
+    flex-wrap: wrap; /* En un celular angosto pasan a estar uno debajo del otro */
+    gap: 10px; /* Separación entre los dos */
+} /* Fin de .par-botones */
+
+.par-botones > * { flex: 1 1 130px; margin: 0; } /* Cada botón ocupa la mitad, sin margen propio */
+
+.hoja { /* La hoja: fondo blanco, borde fino y letra de libro */
+    background: #ffffff; /* Fondo blanco, como el papel */
+    border: 1px solid #c9d6ea; /* Borde fino */
+    border-radius: 4px; /* Esquinas apenas redondeadas */
+    padding: 24px 30px; /* Márgenes generosos, como en una hoja */
+    margin: 16px 0; /* Aire arriba y abajo */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra suave: parece una hoja apoyada */
+    font-family: Georgia, "Times New Roman", serif; /* Letra con serifa, de libro */
+    line-height: 1.5; /* Renglones algo separados */
+} /* Fin de .hoja */
+
+.hoja-cabecera { /* Encabezado de la hoja */
+    border-bottom: 2px solid #3f6499; /* Línea azul que lo separa del resto */
+    padding-bottom: 12px; /* Aire antes de la línea */
+    margin-bottom: 8px; /* Aire después de la línea */
+} /* Fin de .hoja-cabecera */
+
+.hoja-cabecera p { margin: 2px 0; } /* Los renglones del encabezado van juntos */
+
+.hoja-titulo { font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.08em; color: #3f6499; } /* "Ficha de seguimiento": chico, en mayúsculas y azul */
+
+.hoja-nombre { font-size: 1.5em; font-weight: bold; } /* Nombre del niño o la niña, grande */
+
+.hoja-dato { color: #555555; } /* Fecha de nacimiento, en gris */
+
+.hoja-seccion { /* Título de cada sección de la hoja (Notas, Historias asignadas) */
+    margin: 20px 0 6px; /* Aire arriba para separar una sección de la anterior */
+    font-size: 1.1em; /* Un poco más grande que el texto */
+    color: #3f6499; /* Azul */
+    border-bottom: 1px solid #c9d6ea; /* Línea fina debajo */
+} /* Fin de .hoja-seccion */
+
+.hoja-nota { /* Una nota de la hoja */
+    padding: 10px 0; /* Aire arriba y abajo */
+    border-bottom: 1px dashed #c9d6ea; /* Línea punteada que separa una nota de la siguiente */
+} /* Fin de .hoja-nota */
+
+.hoja-nota p { margin: 4px 0; } /* Los renglones de la nota van juntos */
+
+.hoja-meta { font-size: 0.8em; color: #777777; } /* "Cargada el...": chico y gris */
+
+.hoja-vacia { color: #777777; font-style: italic; } /* Aviso de que no hay nada cargado */
+
+.hoja-lista { margin: 4px 0; padding-left: 22px; } /* Lista de historias asignadas */
+
+@media print { /* Al imprimir, la hoja queda limpia */
+    body, body.con-hoja { background: #ffffff; max-width: none; margin: 0; padding: 0; } /* Sin fondo de color y a todo el ancho */
+    .no-imprimir { display: none !important; } /* Botones y avisos no salen en el papel */
+    .hoja { border: none; box-shadow: none; padding: 0; margin: 0; } /* Sin borde ni sombra */
+    .hoja-nota { page-break-inside: avoid; } /* Una nota no se corta entre dos páginas */
+} /* Fin de @media print */

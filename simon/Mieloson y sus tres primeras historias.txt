@@ -1,0 +1,51 @@
+1. Rosa va al baño
+
+Descripción: Rosa pide ir al baño, hace pis y se lava las manos. · Actividad: Ir al baño
+
+Narración: El Sol se asoma por la ventana de mi amiga Rosa y la despierta.
+Narración: Rosa se baja de la cama y se pone las pantuflas.
+Narración: Rosa va al cuarto de mamá y papá. Le da la mano a mamá y señala la puerta: quiere ir al baño.
+Narración: En el baño, Rosa se sienta en su pelela, como mamá. Hace pis.
+Decisión: ¿Qué hace Rosa ahora?
+✅ Se lava las manos
+Sale del baño
+Narración: Rosa sale del baño con las manos limpias.
+
+2. Rosa desayuna
+
+Descripción: Rosa desayuna, pide permiso y se cepilla los dientes. · Actividad: Desayuno e higiene
+
+Narración: Mi amiga Rosa ya despertó, fue al baño y se sentó a la mesa para desayunar.
+Narración: A Rosa le encantan la leche y la miel. Mamá le prepara una gran taza de leche y una tostada con miel.
+Narración: Rosa terminó su leche y su tostada. Le quedaron la boca y los dientes sucios.
+Narración: Rosa se limpia la boca con una servilleta.
+Narración: Rosa le muestra la taza vacía a mamá para que le de permiso para ir a jugar.
+Decisión: ¿que debe hacer antes?
+✅ Se cepilla los dientes
+Va a jugar
+Narración: Rosa se cepilla los dientes. ¡Ahora sí está lista para jugar!
+
+3. Mieloson se baña
+Descripción: Mieloson se baña antes de dormir. · Actividad: Baño
+Narración: Mi amigo el Sol se fue y llegó su hermana, la Luna. Ya es de noche y es hora de bañarse antes de dormir.
+Narración: Mieloson estuvo jugando todo el día y quedó sucio. Necesita limpiarse el cuerpo.
+Narración: Con ayuda de papá, Mieloson se saca la ropa.
+Narración: Mieloson entra a la bañera, con agua calentita y sus juguetes.
+Narración: ¡Qué lindo es bañarse! Mamá o papá le moja la cabeza y el cuerpo mientras Mieloson juega.
+Decisión: Mieloson quiere ayudar a lavarse: ¿Con qué se lava Mieloson el cuerpo?
+✅ Con jabón
+Con un juguete
+Narración: Mieloson se enjuaga.
+Decisión: Mieloson sale del agua: ¿Que debe hacer? ✅ se seca con la toalla, - se va al cuarto.
+Narración: ¡Mieloson está limpio y listo para dormir!
+
+4. Mieloson ordena los juguetes
+Descripción: Mieloson guarda sus juguetes cuando termina de jugar. · Actividad: Orden
+Narración: Mi amigo Mieloson está en su habitación y mira su caja de juguetes.
+Narración: Mieloson saca unos muñecos.
+Narración: Mieloson juega por todo el piso. ¡Se divierte mucho!
+Narración: Mamá lo viene a buscar: es hora de comer.
+Decisión: ¿que debe hacer Mieloson antes de comer? 
+✅ Guardar los juguetes en la caja
+Los deja en el piso
+Narración: El piso quedó libre. Más tarde, Mieloson podrá volver a jugar.
